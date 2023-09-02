@@ -1,0 +1,17 @@
+@use "variables" as *;
+
+//MIXIN
+// Mixin para definir el tamaño de un contenedor u otra etiqueta ( utilizada en responsive.scss:8 o style.scss:424 )
+@mixin sizes($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+// FUNCTIONS AND OPERATIONS
+//Si el boton no tiene un fondo blanco, el texto será blanco para contrastar (utilizado en botones de style.css)
+@mixin text-theme($bgcolor){
+    @if $bgcolor != $background-color_1 and $bgcolor != $background-color_3{
+        background-color: $bgcolor;
+        color: white;
+    }
+}
